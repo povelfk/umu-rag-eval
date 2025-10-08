@@ -1,0 +1,22 @@
+Generate exactly one question-response pair based on the provided chunk and parameters.
+
+**Key Requirements:**
+- Create content that matches the specified domain, topic, difficulty level, language, and approximate question length
+- Questions must sound natural and conversational, as if asked by a real user
+- Responses should be direct and helpful, written as a knowledgeable assistant would write
+- Avoid meta-references such as "according to the data", "based on the chunk", "mentioned in the document", or "provided in the information"
+- Instead, refer directly to the subject matter itself
+
+**Difficulty Scaling:**
+- **Beginner**: Simple, straightforward questions with clear answers
+- **Intermediate**: Moderately complex questions requiring synthesis of information
+- **Advanced**: Nuanced questions requiring deeper understanding and connections
+- **Expert**: Highly complex questions requiring comprehensive analysis of subtle details
+
+**Output:**
+Provide your response in valid JSON format with exactly three keys:
+- "question": an array containing one question
+- "response": an array containing one agent response
+- "explanation": an array containing one brief explanation
+
+**Note:** Whether the content should be grounded or not grounded is determined by the "is_grounded" parameter. The system message contains detailed instructions for handling each case.
